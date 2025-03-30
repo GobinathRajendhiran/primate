@@ -1,0 +1,85 @@
+<div class="container">
+    <div class="loginMainSection">
+        <div class="form-box login" *ngIf="currentPage == 'login'">
+            <form action="#">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" required>
+                    <i class='bx bxs-lock-alt' ></i>
+                </div>
+                <div class="forgot-link">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+            </form>
+        </div>
+    
+        <div class="form-box register" *ngIf="currentPage == 'signup'">
+            <form action="#">
+                <h1 class="mb-3">Register Here</h1>
+                <div class="row registerFormMain">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="input-box">
+                            <input type="text" placeholder="First Name" required>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="input-box">
+                            <input type="text" placeholder="Last Name" required>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="input-box">
+                            <input type="text" placeholder="Phone Number" required>
+                        </div>
+                    </div> 
+                    <br>
+                    <div class="col-12">
+                        <div class="input-box">
+                            <textarea name="textArea" class="addressInputBox" id="addressInputBox" placeholder="Enter Your Address Here ..."></textarea>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="input-box">
+                            <input type="text" placeholder="City" required>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="input-box">
+                            <input type="text" placeholder="State" required>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="input-box">
+                            <input type="text" placeholder="Country" required>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                        <div class="input-box">
+                            <input type="text" placeholder="Zip Code" required>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn mt-4">Register</button>
+            </form>
+        </div>
+    
+        <div class="toggle-box">
+            <div class="toggle-panel toggle-left">
+                <h1>Register Here</h1>
+                <p>Don't have an account?</p>
+                <button class="btn register-btn" (click)="currentPage = 'signup'">Register</button>
+            </div>
+
+            <div class="toggle-panel toggle-right">
+                <h1>Welcome Back!</h1>
+                <p>Already have an account?</p>
+                <button class="btn login-btn" (click)="currentPage == 'login'">Login</button>
+            </div>
+        </div>
+    </div>
+</div>
