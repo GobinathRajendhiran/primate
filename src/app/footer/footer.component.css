@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.company-brand {
+    font-size: 2rem;
+    color: #00A19c;    
+    font-style: italic;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+}
+
+footer#footer {
+    padding: 2rem 5rem 0rem 5rem;
+    border-bottom: 1px solid #E0E0E0;
+    background-color: #111111;
+    color: #EFF5F9;
+  }
+  
+  #footer .footer-item {
+    margin-right: 100px;
+  }
+  
+  #footer .footer-item img.footer-logo {
+    margin-bottom: 40px;
+  }
+  
+  #footer .footer-item p {
+    width: 80%;
+  }
+  
+  #footer .footer-menu {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+  
+  #footer .footer-menu ul {
+    list-style: none;
+  }
+  
+  #footer .footer-menu ul a {
+    color: var(--dark-text-color);
+    text-decoration: none;
+  }
+  
+  #footer .footer-menu:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-menu h5 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-transform: capitalize;
+  }
+
+  .copyright {
+    height: 30px;
+    padding: 2rem 0rem 5rem 0rem;
+    border-top: 1px solid white;
+    margin-top: 25px;
+  }
+
+  .social-links ul {
+    gap: 30px;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 2rem; 
+  }
+
+  .social-links ul li {
+    list-style: none;
+    display: inline-block;
+  }
+
+  /* marquee slider styling */
+  .marquee_container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: #111111;
+    color: #EFF5F9;
+    padding: 0.2rem 0;
+    border-bottom: 1px solid #EFF5F9;
+  }
+
+  .marquee {
+    display: inline-block;
+    animation: marquee 40s linear infinite;
+    font-weight: bold;
+    padding-top: 8px;
+    background-color: var(--color-light-blue);
+  }
+
+  @keyframes marquee {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-100%, 0, 0);
+    }
+  }
+
+  .marqueeText {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 1rem;
+    background-color: var(--color-white);
+    color: var(--color-blue);
+    padding: 5px 10px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+
+  
+  @media screen and (max-width: 768px) {
+    #footer .footer-item {
+      margin-right: 0;
+    }
+  }
