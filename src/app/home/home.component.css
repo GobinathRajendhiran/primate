@@ -3,3 +3,14 @@
     width: 100%;
     object-fit: cover;
 }
+.bannerVideo {
+  position: relative;
+}
+
+.bannerTopContent {
+  position: absolute;
+  bottom: 0px !important;
+  border-top-right-radius: 20px;
+  background-color: white;
+  padding: 15px 25px;
+}

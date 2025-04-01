@@ -1,14 +1,318 @@
 <!-- banner section -->
-<div class="bannerVideo">
-    <video autoplay muted loop class="videoContainer">
-        <source src="assets/videos/sampleVideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <!-- <div class="overlay"></div>
-    <div class="content">
-        <h1>Welcome to Our Website</h1>
-        <p>Your journey starts here.</p>
-    </div> -->
-</div>
+<div class="homeMain" data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
+    <div class="bannerVideo">
+        <video autoplay muted loop class="videoContainer">
+            <source src="assets/videos/sampleVideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="bannerTopContent">
+            <h1>Welcome to PRIMATE</h1>
+            <p>Your Gym journey starts here.</p>
+        </div>
+    </div>
+    
+    <!-- product Section -->
+    
+    <section id="featured-books" class="py-5 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header align-center">
+                        <div class="title text-center">
+                            <span>Some remarkable products</span>
+                        </div>
+                        <h2 class="section-title">Featured Products</h2>
+                    </div>
+                    <div class="product-list">
+                        <div class="row">
+                            <div class="col-md-3" *ngFor="let product of products | slice:0:4">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="{{product.image}}" alt="Books" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
+                                            Cart</button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>{{product.name}}</h3>
+                                        <span>{{product.brand}}</span>
+                                        <div class="item-price">₹ {{product.price}}</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+    
+                    <div class="btn-wrap align-right">
+                        <a href="#" class="btn-accent-arrow d-flex align-items-center">View all products 
+                            <i class='bx bx-right-arrow-alt bxArrow'></i>
+                        </a>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="best-selling" class="leaf-pattern-overlay">
+        <div class="corner-pattern-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+    
+                <div class="col-md-8">
+    
+                    <div class="row">
+    
+                        <div class="col-md-6">
+                            <figure class="products-thumb">
+                                <img src="assets/images/shopping.webp" alt="book" class="single-image">
+                            </figure>
+                        </div>
+    
+                        <div class="col-md-6">
+                            <div class="product-entry">
+                                <h2 class="section-title divider">Best Selling Product</h2>
+    
+                                <div class="products-content">
+                                    <div class="author-name">By Fashionista</div>
+                                    <h3 class="item-title">Elegant Evening Gown</h3>
+                                    <p>Step into elegance with this stunning evening gown, perfect for any special occasion. Crafted with premium materials for a luxurious feel.</p>
+                                    <div class="item-price">₹ 1200.00</div>
+                                    <div class="btn-wrap">
+                                        <a href="#" class="btn-accent-arrow d-flex align-items-center">shop it now 
+                                            <i class='bx bx-right-arrow-alt'></i>
+                                        </a>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                    <!-- / row -->
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
+    
+    <section id="popular-books" class="bookshelf py-5 my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+    
+                    <div class="section-header align-center">
+                        <div class="title">
+                            <span>Some quality products</span>
+                        </div>
+                        <h2 class="section-title">Popular Products</h2>
+                    </div>
+    
+                    <ul class="tabs">
+                        <li data-tab-target="#all-genre" class="active tab">All Products</li>
+                        <li data-tab-target="#business" class="tab">T-Shirts</li>
+                        <li data-tab-target="#technology" class="tab">Shorts</li>
+                        <li data-tab-target="#romantic" class="tab">Track Pants</li>
+                        <li data-tab-target="#adventure" class="tab">Hoodies</li>
+                        <li data-tab-target="#fictional" class="tab">Gym Accessories</li>
+                    </ul>
+    
+                    <div class="tab-content">
+                        <div id="all-genre" data-tab-content class="active">
+                            <div class="row">
+                                <div class="col-md-3" *ngFor="let product of products | slice:0:8">
+                                    <div class="product-item">
+                                        <figure class="product-style">
+                                            <img src="assets/images/shopping.webp" alt="Books" class="product-item">
+                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
+                                                Cart</button>
+                                        </figure>
+                                        <figcaption>
+                                            <h3>{{product.name}}</h3>
+                                            <span>{{product.brand}}</span>
+                                            <div class="item-price">₹ {{product.price}}</div>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="business" data-tab-content>
+                            <div class="row">
+                                <div class="col-md-3" *ngFor="let product of products | slice:0:8">
+                                    <div class="product-item">
+                                        <figure class="product-style">
+                                            <img src="assets/images/shopping.webp" alt="Books" class="product-item">
+                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
+                                                Cart</button>
+                                        </figure>
+                                        <figcaption>
+                                            <h3>{{product.name}}</h3>
+                                            <span>{{product.brand}}</span>
+                                            <div class="item-price">₹ {{product.price}}</div>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="technology" data-tab-content>
+                            <div class="row">
+                                <div class="col-md-3" *ngFor="let product of products | slice:0:8">
+                                    <div class="product-item">
+                                        <figure class="product-style">
+                                            <img src="assets/images/shopping.webp" alt="Books" class="product-item">
+                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
+                                                Cart</button>
+                                        </figure>
+                                        <figcaption>
+                                            <h3>{{product.name}}</h3>
+                                            <span>{{product.brand}}</span>
+                                            <div class="item-price">₹ {{product.price}}</div>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="romantic" data-tab-content>
+                            <div class="row">
+                                <div class="col-md-3" *ngFor="let product of products | slice:0:8">
+                                    <div class="product-item">
+                                        <figure class="product-style">
+                                            <img src="assets/images/shopping.webp" alt="Books" class="product-item">
+                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
+                                                Cart</button>
+                                        </figure>
+                                        <figcaption>
+                                            <h3>{{product.name}}</h3>
+                                            <span>{{product.brand}}</span>
+                                            <div class="item-price">₹ {{product.price}}</div>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="adventure" data-tab-content>
+                            <div class="row">
+                                <div class="col-md-3" *ngFor="let product of products | slice:0:8">
+                                    <div class="product-item">
+                                        <figure class="product-style">
+                                            <img src="assets/images/shopping.webp" alt="Books" class="product-item">
+                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
+                                                Cart</button>
+                                        </figure>
+                                        <figcaption>
+                                            <h3>{{product.name}}</h3>
+                                            <span>{{product.brand}}</span>
+                                            <div class="item-price">₹ {{product.price}}</div>
+                                        </figcaption>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div id="fictional" data-tab-content>
+                            <div class="col-md-3" *ngFor="let product of products | slice:0:8">
+                                <div class="product-item">
+                                    <figure class="product-style">
+                                        <img src="assets/images/shopping.webp" alt="Books" class="product-item">
+                                        <button type="button" class="add-to-cart" data-product-tile="add-to-cart">Add to
+                                            Cart</button>
+                                    </figure>
+                                    <figcaption>
+                                        <h3>{{product.name}}</h3>
+                                        <span>{{product.brand}}</span>
+                                        <div class="item-price">₹ {{product.price}}</div>
+                                    </figcaption>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+    
+                </div><!--inner-tabs-->
+    
+            </div>
+        </div>
+    </section>
+    
+    <section id="quotation" class="align-center pb-5 mb-5">
+        <div class="inner-content">
+            <h2 class="section-title divider">Quote of the day</h2>
+            <blockquote>
+            <q>“The pain you feel today will be the strength you feel tomorrow.”</q>
+            <div class="author-name">- PRIMATE</div>
+            </blockquote>
+        </div>
+    </section>
 
-<!-- product Section -->
+    <section id="subscribe">
+		<div class="container">
+			<div class="row justify-content-center">
+
+				<div class="col-md-8">
+					<div class="row">
+
+						<div class="col-md-6">
+
+							<div class="title-element">
+								<h2 class="section-title divider">Subscribe to our newsletter</h2>
+							</div>
+
+						</div>
+                        <div class="col-md-6">
+
+                            <div class="subscribe-content">
+                                <p>Stay updated with our latest products, offers, and exclusive deals. Subscribe to our newsletter and never miss out!</p>
+                                <form id="subscribe-form">
+                                    <input type="email" name="email" placeholder="Enter your email address" required>
+                                    <button type="submit" class="btn-subscribe">
+                                        <span>Subscribe</span>
+                                        <i class="icon icon-send"></i>
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

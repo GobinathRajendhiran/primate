@@ -179,7 +179,7 @@ form {
     left: -250%;
     width: 300%;
     height: 100%;
-    background: #7494ec;
+    background: #03BFB5;
     /* border: 2px solid red; */
     border-radius: 150px;
     z-index: 2;
@@ -233,6 +233,10 @@ form {
     background: transparent;
     border: 2px solid #fff;
     box-shadow: none;
+}
+
+.submitBtn {
+    background-color: #00A19C;
 }
 
 @media (max-width: 991px) {

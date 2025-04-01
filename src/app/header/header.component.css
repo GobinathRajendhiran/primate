@@ -4,9 +4,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 110px;
     background-color: #111111;
-    padding: 0px 30px;
+    padding: 20px 30px;
 }
 
 .header__logo {
@@ -23,11 +22,17 @@
     align-items: center;
     margin-bottom: 0;
     font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    margin: auto;
 }
 
-.headerNavList li {
-    list-style: none;
-    display: inline-block;
+.headerNavList li a {
+    margin: 0 20px;
+    color: #EFF5F9;
+}
+
+.headerNavList li a {
     margin: 0 20px;
     color: #EFF5F9;
 }
@@ -39,4 +44,34 @@
     color: #EFF5F9;
     gap: 20px;
     font-size: 1.3rem;
+}
+
+.headerProductListCOntainer {
+    position: relative;
+}
+
+.headerProductList {
+    width: 300px;
+    position: absolute;
+    background: white;
+    border-radius: 5px;
+    top: 40px;
+    padding: 20px;
+}
+
+.dropdown-menu {
+    padding: 11px 23px;
+    width: 200px;
+    left: 15%;
+}
+
+@media (max-width: 991px) {
+    .headerNavList {
+        align-items: start;
+        margin-top: 30px;
+    }
+
+    .headerRightSideSection {
+        margin-top: 35px;
+    }
 }
